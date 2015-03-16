@@ -1,46 +1,81 @@
 FORMAT: 1A
 
-# eli-GUIS15
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+# GUI S15 Project API
+A site that gives the user a snapshot of what the internet is up to today in a clean and orderly fashion. A good word to describe the theme/motivation behind this site is discovery.
+Some things that might be included are but not limited to: a news article about our country or the world, a trending twitter post/hashtag, word or picture or quote of the day, etc.
+Link to Apiary.io view: http://docs.eliguis15.apiary.io/#
 
-# Group Notes
-Notes related resources of the **Notes API**
+# Group User Email Signup
+User database related resources of the **GUI S15 Project API**
 
-## Notes Collection [/notes]
-### List all Notes [GET]
+## Users DB [/users]
+Users will be able to subscribe for updates to the development of the website.
+
+### Get list of users [GET]
 + Response 200 (application/json)
 
         [{
-          "id": 1, "title": "Jogging in park"
+          "id": 1,
+          "name": "Anna Frozen",
+          "email": "afrozen@mit.edu"
         }, {
-          "id": 2, "title": "Pick-up posters from post-office"
+          "id": 2,
+          "name": "Jack Black",
+          "email": "afrozen@mit.edu"
         }]
 
-### Create a Note [POST]
+### Add user to email list [POST]
 + Request (application/json)
 
-        { "title": "Buy cheese and bread for breakfast." }
+        [{
+            "name": "Anna Frozen",
+            "email": "afrozen@mit.edu"
+        }]
 
 + Response 201 (application/json)
 
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
+        [{
+            "id": 1, 
+            "name": "Anna Frozen",
+            "email": "afrozen@mit.edu"
+        }]
 
-## Note [/notes/{id}]
-A single Note object with all its details
+### Remove a user from the list [DELETE]
++ Response 204
+
+## User [/user/{id}]
+A single user object with all its details
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + id (required, number, `1`) ... Unique ID to each subscriber.
 
-### Retrieve a Note [GET]
+### Get user information [GET]
 + Response 200 (application/json)
 
-    + Header
+        [{
+          "id": 1,
+          "name": "Anna Frozen",
+          "email": "afrozen@mit.edu"
+        }]
 
-            X-My-Header: The Value
+### Update user information [PUT]
++ Request Update User Info (application/json)
 
-    + Body
+        [{
+            "name": Elsa Frozen",
+            "email": "efrozen@yale.edu"
+        }]
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
-
-### Remove a Note [DELETE]
 + Response 204
+
+### Update user name [PATCH]
++ Request Update User Name Only (application/json)
+
+        { "name": "Jack Black" }
+
++ Response 204
+
+### User unsubscribe [DELETE]
++ Response 204
+
+
