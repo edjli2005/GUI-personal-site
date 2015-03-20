@@ -1,6 +1,8 @@
 # eli
 GUI S15 Class Repo
 
+[![Build Status](https://travis-ci.org/edjli2005/eli.svg?branch=master)](https://travis-ci.org/edjli2005/eli)
+
 Site link: http://smu-gui-spring-2015.github.io/eli/
 
 [![Build Status](https://travis-ci.org/edjli2005/eli.svg?branch=master)](https://travis-ci.org/edjli2005/eli)
