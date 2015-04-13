@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/contact.css" type="text/css">
+    
+</head>
+
+<body>
+    <!-- nav -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div id="template-begin">
+                    <script id="nav" type="text/x-handlebars-template">
+                        <ul class="nav navbar-nav navbar-right">
+                            {{#each links}}
+                            <li>
+                                <a href={{link}}>{{tag}}</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </script>
+                </div>
+            </div><!-- /.navbar-collapse -->
+            
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+    <div id="template-contact-begin">
+        <script id="global" type="text/x-handlebars-template">
+            <div id="header"></div>
+            <div id="title">{{header}}</div>
+            <div id="footer">&copy; {{footer}}</div>
+        </script>
+    </div>
+    
+    <div id="content">
+        <h3>CONTACT INFORMATION</h3>
+        <div class="text">
+            <div class="git">
+                <img alt="git" id="git" src="assets/glyphicons/glyphicons_free/glyphicons/png/glyphicons-423-git-branch.png">
+                <p>Github</p>
+            </div>
+            <div class="email">
+                <img alt="email" id="email" src="assets/glyphicons/glyphicons_free/glyphicons/png/glyphicons-11-envelope.png">
+                <p>E-mail</p>
+            </div>
+            <div class="occup">
+                <img alt="occup" id="occup" src="assets/glyphicons/glyphicons_free/glyphicons/png/glyphicons-65-lightbulb.png">
+                <p>I'm a student @ SMU.</p>
+            </div>
+            <div class="comment">
+                <img alt="comment" id="comment" src="assets/glyphicons/glyphicons_free/glyphicons/png/glyphicons-499-sunglasses.png">
+                <p>NYAN CAT. That is all.</p>
+            </div>
+        </div>
+        <div class="picture">
+            <img alt="pic" id="pic" src="assets/nyan.jpeg">
+        </div>
+    </div><!-- end content -->
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    
+    <!-- Handlebars JS -->
+    <script type="text/javascript" src="js/handlebars-v3.0.1.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    
+</body>
+    
+</html>
