@@ -77,7 +77,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #555555;
-    background-image: url(/assets/Brooklyn-Bridge.jpg);
+    background-image: url('../assets/Brooklyn-Bridge.jpg');
     background-position: center bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
