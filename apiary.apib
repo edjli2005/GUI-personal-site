@@ -1,0 +1,81 @@
+FORMAT: 1A
+
+# GUI S15 Project API
+A site that gives the user a snapshot of what the internet is up to today in a clean and orderly fashion. A good word to describe the theme/motivation behind this site is discovery.
+Some things that might be included are but not limited to: a news article about our country or the world, a trending twitter post/hashtag, word or picture or quote of the day, etc.
+Link to Apiary.io view: http://docs.eliguis15.apiary.io/#
+
+# Group User Email Signup
+User database related resources of the **GUI S15 Project API**
+
+## Users DB [/users]
+Users will be able to subscribe for updates to the development of the website.
+
+### Get list of users [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1,
+          "name": "Anna Frozen",
+          "email": "afrozen@mit.edu"
+        }, {
+          "id": 2,
+          "name": "Jack Black",
+          "email": "afrozen@mit.edu"
+        }]
+
+### Add user to email list [POST]
++ Request (application/json)
+
+        [{
+            "name": "Anna Frozen",
+            "email": "afrozen@mit.edu"
+        }]
+
++ Response 201 (application/json)
+
+        [{
+            "id": 1, 
+            "name": "Anna Frozen",
+            "email": "afrozen@mit.edu"
+        }]
+
+### Remove a user from the list [DELETE]
++ Response 204
+
+## User [/user/{id}]
+A single user object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Unique ID to each subscriber.
+
+### Get user information [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1,
+          "name": "Anna Frozen",
+          "email": "afrozen@mit.edu"
+        }]
+
+### Update user information [PUT]
++ Request Update User Info (application/json)
+
+        [{
+            "name": Elsa Frozen",
+            "email": "efrozen@yale.edu"
+        }]
+
++ Response 204
+
+### Update user name [PATCH]
++ Request Update User Name Only (application/json)
+
+        { "name": "Jack Black" }
+
++ Response 204
+
+### User unsubscribe [DELETE]
++ Response 204
+
+
