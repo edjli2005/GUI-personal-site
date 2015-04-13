@@ -3,7 +3,7 @@ var template = Handlebars.compile(source);
 
 var context = {
     links: [
-        { link: "landing.html", tag: "Main" },
+        { link: "index.html", tag: "Main" },
         { link: "about.html", tag: "About" },
         { link: "contact.html", tag: "Contact"},
         { link: "login.html", tag: "Login" }
