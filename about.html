@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Landing Page</title>
+    <title>About</title>
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -38,29 +38,30 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="landing.html">Main</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+                <div id="template-begin">
+                    <script id="nav" type="text/x-handlebars-template">
+                        <ul class="nav navbar-nav navbar-right">
+                            {{#each links}}
+                            <li>
+                                <a href={{link}}>{{tag}}</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </script>
+                </div>
+            </div><!-- /.navbar-collapse -->
+            
         </div>
         <!-- /.container-fluid -->
     </nav>
     
-    <div id="header"></div>
-    
-    <div id="title">About This Project</div>
+    <div id="template-about-begin">
+        <script id="global" type="text/x-handlebars-template">
+            <div id="header"></div>
+            <div id="title">{{header}}</div>
+            <div id="footer">&copy; {{footer}}</div>
+        </script>
+    </div>
     
     <div id="content">
         <h3>Personal project for CSE 3345: Graphical User Interface Design</h3>
@@ -87,12 +88,16 @@
                 </ul>
             <p title="Conclusion">I'll be able to follow all these posts to their sources. The site will be sort of like <a href="http://fuckinghomepage.com/">Fucking Homepage</a>, but a little less profane and prettier. I want it to be user customizable to show more relevant content but still retain the element of surprise.</p>
         </div>
-        
-    </div>
+    </div><!-- end content -->
     
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
+    
+    <!-- Handlebars JS -->
+    <script type="text/javascript" src="js/handlebars-v3.0.1.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 

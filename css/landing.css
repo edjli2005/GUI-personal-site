@@ -171,3 +171,7 @@ header .header-content .header-content-inner p {
 .btn-xl {
     padding: 15px 30px;
 }
+
+#template-begin {
+    height: 50px;
+}

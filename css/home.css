@@ -1,0 +1,75 @@
+body, html {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.element1 {
+    height: 100px;
+    background-color: aqua;
+}
+
+.element2 {
+    background-color: blueviolet;
+}
+
+.element3 {
+    background-color: crimson;
+}
+
+.element4 {
+    column-width: 100%;
+    height: 100%;
+    background-color: darkmagenta;
+}
+
+.element5 {
+    column-width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+.element6 {
+    column-width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+
+.element7 {
+    column-width: 100%;
+    height: 100%;
+    background-color: fuchsia;
+}
+
+.element8 {
+    column-width: 100%;
+    height: 100%;
+    background-color: dodgerblue;
+}
+
+.element9 {
+    column-width: 100%;
+    height: 100%;
+    background-color: khaki;
+}
+
+.element10 {
+    column-width: 100%;
+    height: 100%;
+    background-color: lightcoral;
+}
+
+.element11 {
+    column-width: 100%;
+    height: 100%;
+    background-color: navy;
+}
+
+.element12 {
+    column-width: 100%;
+    height: 100%;
+    background-color: brown;
+}
